@@ -15,7 +15,7 @@ export const fetchPMLoginDetails = async (req, res) => {
     // const access_token = await getAccessToken();
     // const data = await fetchReportData(appName, reportName, access_token);
 
-    const data = await axios.get("http://localhost:5000/getUsers");
+    const data = await axios.get("https://localhost:5000/getUsers");
     // console.log("Fetched data:", data.data);  // Log to verify structure
 
     const eData = data.data;  // Access all users, not just the first one
@@ -63,7 +63,7 @@ export const fetchForgotPasswordDetails = async (req, res) => {
   try {
     const { email } = req.body;
     console.log("Email forgot:", email);
-    const data = await axios.get("http://localhost:5000/getUsers");
+    const data = await axios.get("https://localhost:5000/getUsers");
     // console.log("Fetched data:", data.data);  // Log to verify structure
 
     const eData = data.data;  // Access all users, not just the first one
