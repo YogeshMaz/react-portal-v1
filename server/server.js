@@ -25,12 +25,6 @@ const app = express();
 
 
 app.use(cors());
-// Allow CORS from your frontend
-app.use(cors({
-  origin: 'http://projectmanagerportalvone.machinemaze.com',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true, // If you're using cookies
-}));
 app.use(helmet());
 app.use(morgan("dev"));
 app.use(express.json());

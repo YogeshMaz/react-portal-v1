@@ -13,13 +13,18 @@ const useFetchCustomDataV1 = (url) => {
       const response = await Axios.get(url);
       console.log("con", response.data);
 
-      if (response.data.result.code === 9220) {
+      if (response?.data?.result?.code === 9220) {
         // No content
         setNoData(true);
         setData([]); // Ensure data is reset when no content
-      } else if (response.data.result && response.data.result.data) {
+      } else if (response?.data?.result && response?.data?.result?.data) {
         // Data is an array
-        setData(response.data.result.data);
+        setData(response?.data?.result?.data);
+        setNoData(false);
+      } else if (response && response?.data) {
+        // Data is an array
+        console.log("deii");
+        setData(response?.data);
         setNoData(false);
       } else {
         // Unexpected data format
