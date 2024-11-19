@@ -7,11 +7,14 @@ import ClosedRfqs from '../../pages/rfq_management/rfq_dashboard/ClosedRfqs';
 import AddRfq from '../rfq_management/rfq_dashboard/AddRfq';
 import Widgets from '../rfq_management/rfq_dashboard/rfq_widgets';
 import { APILinkRoutes } from '../../components/apiLinks/APILinkRoutes';
-import usefetchCustomAPIData from "../../components/hooks/fetchCustomAPI";
+// import usefetchCustomAPIData from "../../components/hooks/fetchCustomAPI";
+import useFetchCustomDataV1 from '../../components/hooks/fetchCustomApiv1';
 import { TbReceiptRupee } from "react-icons/tb";
 
 const RfqDashboard = () => {
-  const { data } = usefetchCustomAPIData(APILinkRoutes.summaryRoute);
+  const { data } = useFetchCustomDataV1(APILinkRoutes.summaryRoute);
+
+  console.log("print of " , data?.total_vendor_pos)
 
   const [tabIndex, setTabIndex] = useState(0);
 

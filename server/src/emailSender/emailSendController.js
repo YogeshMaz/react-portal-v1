@@ -21,10 +21,10 @@ const sendMail = async (email) => {
       html: `${email}
         <p>We heard that you lost your Machinemaze password. Sorry about that!</p>
         <p>But don’t worry! You can use the following button to reset your password:</p>
-        <a href="http://localhost:3000/reset_password?token=unique-reset-token" 
+        <a href="https://projectmanagerportalvone.machinemaze.com/reset_password?token=unique-reset-token" 
            style="background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Reset your password</a>
         <p>If you don’t use this link within 3 hours, it will expire. To get a new password reset link, visit: 
-        <a href="http://localhost:3000/reset_password">http://localhost:3000/reset_password</a></p>
+        <a href="https://projectmanagerportalvone.machinemaze.com/reset_password">https://projectmanagerportalvone.machinemaze.com/reset_password</a></p>
         <p>Thanks,<br>The Machinemaze Team</p>
       `,
     };
